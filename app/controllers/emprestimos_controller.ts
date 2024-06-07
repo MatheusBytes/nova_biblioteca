@@ -1,4 +1,4 @@
- import type { HttpContext } from '@adonisjs/core/http'
+import type { HttpContext } from '@adonisjs/core/http'
 
 import Emprestimo from "#models/emprestimo"
 
@@ -16,8 +16,8 @@ export default class EmprestimosController {
         return await Emprestimo.findOrFail(params.id)
     }
 
-    async store({request}: HttpContext){
-        const dados = request.only(['status'])
+    async store({ request }: HttpContext) {
+        const dados = request.only(['status', 'usuario_id', 'livro_id'])
 
 
         return await Emprestimo.create(dados)

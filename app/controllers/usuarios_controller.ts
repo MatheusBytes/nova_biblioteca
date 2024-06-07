@@ -18,7 +18,7 @@ export default class UsuariosController {
     }
 
     async store({ request }: HttpContext) {
-        const dados = request.only(['nome', 'email', ])
+        const dados = request.only(['nome', 'email',])
 
 
         return await Usuario.create(dados)

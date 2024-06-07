@@ -18,7 +18,7 @@ export default class LivrosController {
     }
 
     async store({ request }: HttpContext) {
-        const dados = request.only(['titulo','descricao'])
+        const dados = request.only(['titulo','descricao','autor_id','categoria_id'])
 
         return await Livro.create(dados)
     }

@@ -17,7 +17,7 @@ export default class CategoriasController {
     }
 
     async store({ request }: HttpContext) {
-        const dados = request.only(['nome', 'biografia'])
+        const dados = request.only(['nome','descricao'])
 
 
         return await Categoria.create(dados)
