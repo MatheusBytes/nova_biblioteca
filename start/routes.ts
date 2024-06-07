@@ -7,6 +7,11 @@
 |
 */
 
+import AutorsController from '#controllers/autors_controller'
+import CategoriasController from '#controllers/categorias_controller'
+import EmprestimosController from '#controllers/emprestimos_controller'
+import LivrosController from '#controllers/livros_controller'
+import UsuariosController from '#controllers/usuarios_controller'
 import router from '@adonisjs/core/services/router'
 
 router.get('/', async () => {
@@ -14,3 +19,10 @@ router.get('/', async () => {
     hello: 'world',
   }
 })
+
+
+router.resource('/usuario', UsuariosController).apiOnly()
+router.resource('/livros',LivrosController).apiOnly()
+router.resource('/categorias',CategoriasController).apiOnly()
+router.resource('/autores',AutorsController).apiOnly()
+router.resource('/emprestimo',EmprestimosController).apiOnly()
