@@ -7,7 +7,7 @@ export default class AutorsController {
     async index({ request }: HttpContext) {
         const page = request.input('page', 3)
         const perPage = request.input('perPage', 10)
-        return await Autor.query().paginate(page, perPage)
+        return  Autor.query().paginate(page, perPage)
     }
 
     async show({ params }: HttpContext) {

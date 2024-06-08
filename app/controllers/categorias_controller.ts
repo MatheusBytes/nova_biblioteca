@@ -5,7 +5,7 @@ export default class CategoriasController {
 
     async index({ request }: HttpContext) {
         const page = request.input('page', 1)
-        const perPage = request.input('perPage', 10)
+        const perPage = request.input('perPage', 20)
 
         return await Categoria.query().paginate(page, perPage)
 

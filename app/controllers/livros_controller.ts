@@ -25,7 +25,7 @@ export default class LivrosController {
 
     async update({ params, request }: HttpContext) {
         const produto = await Livro.findOrFail(params.id)
-        const dados = request.only([])
+        const dados = request.only(['titulo','descricao','autor_id','categoria_id'])
 
         produto.merge(dados)
         return await produto.save()
