@@ -1,4 +1,4 @@
- import type { HttpContext } from '@adonisjs/core/http'
+import type { HttpContext } from '@adonisjs/core/http'
 
 import Autor from "#models/autor"
 
@@ -7,7 +7,7 @@ export default class AutorsController {
     async index({ request }: HttpContext) {
         const page = request.input('page', 3)
         const perPage = request.input('perPage', 10)
-        return  Autor.query().paginate(page, perPage)
+        return Autor.query().paginate(page, perPage)
     }
 
     async show({ params }: HttpContext) {
@@ -35,7 +35,7 @@ export default class AutorsController {
         const produto = await Autor.findOrFail(params.id)
 
         await produto.delete()
-        return { msg: 'registro deletado com sucesso', Autor}
+        return { msg: 'registro deletado com sucesso', Autor }
 
     }
 }
