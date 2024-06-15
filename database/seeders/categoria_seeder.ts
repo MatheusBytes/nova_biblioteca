@@ -1,5 +1,6 @@
+import Categoria from '#models/categoria'
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
-import Categoria from '../../app/models/categoria.js'
+
 
 export default class extends BaseSeeder {
   async run() {

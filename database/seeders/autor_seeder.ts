@@ -1,5 +1,6 @@
+import Autor from '#models/autor'
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
-import Autor from '../../app/models/autor.js'
+
 
 export default class extends BaseSeeder {
   async run() {
